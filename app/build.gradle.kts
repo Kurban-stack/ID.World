@@ -17,9 +17,52 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    flavorDimensions += "operators"
+    productFlavors {
+        create("operatorA") {
+            dimension = "operators"
+            applicationId = "com.example.idworld.operatorA"
+        }
+        create("operatorB") {
+            dimension = "operators"
+            applicationIdSuffix = ".operatorB"
+        }
+        create("operatorC") {
+            dimension = "operators"
+            applicationIdSuffix = ".operatorC"
+        }
+        create("operatorD") {
+            dimension = "operators"
+            applicationIdSuffix = ".operatorD"
+        }
+        create("operatorE") {
+            dimension = "operators"
+            applicationIdSuffix = ".operatorE"
+        }
+        create("operatorF") {
+            dimension = "operators"
+            applicationIdSuffix = ".operatorF"
+        }
+        create("operatorG") {
+            dimension = "operators"
+            applicationIdSuffix = ".operatorG"
+        }
+        create("operatorH") {
+            dimension = "operators"
+            applicationIdSuffix = ".operatorH"
+        }
+        create("operatorI") {
+            dimension = "operators"
+            applicationIdSuffix = ".operatorI"
+        }
+        create("operatorJ") {
+            dimension = "operators"
+            applicationIdSuffix = ".operatorJ"
+        }
+    }
     buildTypes {
         release {
-            isMinifyEnabled = false
+            isMinifyEnabled = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
@@ -32,6 +75,9 @@ android {
     }
     kotlinOptions {
         jvmTarget = "1.8"
+    }
+    buildFeatures {
+        viewBinding = true
     }
 }
 
